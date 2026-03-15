@@ -1,10 +1,8 @@
 <script>
 setInterval(()=>{
-  try{
-    console.log("T1 alive")
-    if(window.opener){
-        window.opener.console.log("MESSAGE FROM T1")
-    }
-  }catch(e){}
-},100);
+    let w = open("http://ritual-app:5000/");
+    try{
+        w.location = "javascript:console.log(document.cookie)";
+    }catch(e){}
+},500);
 </script>
